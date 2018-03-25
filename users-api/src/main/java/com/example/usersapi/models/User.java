@@ -8,6 +8,14 @@ import javax.persistence.*;
 @Entity @Table(name = "USERS")
 public class User {
 
+    public User(String userName, String firstName, String lastName, String password, String city) {
+        this.userName = userName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.city = city;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
