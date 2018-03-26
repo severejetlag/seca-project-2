@@ -1,6 +1,7 @@
-package com.example.postsapi.models;
+package com.example.usersapi.models;
 
 import lombok.*;
+
 import javax.persistence.*;
 
 @Data

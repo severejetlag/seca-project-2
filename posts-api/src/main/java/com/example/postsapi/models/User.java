@@ -1,4 +1,4 @@
-package com.example.usersapi.models;
+package com.example.postsapi.models;
 
 import lombok.*;
 
@@ -36,5 +36,4 @@ public class User {
 
     @Column(name = "PASSWORD")
     private String password;
-
 }

@@ -5,7 +5,10 @@ import com.example.postsapi.models.Post;
 import com.example.postsapi.repositories.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class PostsController {
@@ -14,7 +17,11 @@ public class PostsController {
     private PostRepository postRepository;
 
     @GetMapping("/posts")
-    public Iterable<Post> findAllPosts() {
-        return postRepository.findAll();
+    public List<Post> findAllPosts() {
+        return postRepository.findAllPostsWithUsers();
     }
+//    @GetMapping("/users/{postId}")
+//    public Post findUserById(@PathVariable Long userId) {
+//        return postRepository.findOne(userId);
+//    }
 }
