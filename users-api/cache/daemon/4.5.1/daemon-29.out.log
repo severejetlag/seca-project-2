@@ -165,3 +165,4 @@
 [2m2018-03-26 16:58:28.483[0;39m [32m INFO[0;39m [35m70[0;39m [2m---[0;39m [2m[nio-8081-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization started
 [2m2018-03-26 16:58:28.565[0;39m [32m INFO[0;39m [35m70[0;39m [2m---[0;39m [2m[nio-8081-exec-1][0;39m [36mo.s.web.servlet.DispatcherServlet       [0;39m [2m:[0;39m FrameworkServlet 'dispatcherServlet': initialization completed in 82 ms
 [2m2018-03-26 17:02:40.837[0;39m [32m INFO[0;39m [35m70[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2018-03-26 17:07:40.838[0;39m [32m INFO[0;39m [35m70[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration

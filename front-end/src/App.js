@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './components/Home'
 import axios from 'axios'
 import ProfilePage from './components/ProfilePage'
-import {Link} from 'react-router-dom';
 
 class App extends Component {
   state = {

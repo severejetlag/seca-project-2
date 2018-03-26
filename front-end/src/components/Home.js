@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PostList from './PostList'
 import axios from 'axios'
+import Nav from './Nav'
 
 class Home extends Component {
   state={
@@ -48,6 +49,7 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <Nav/>
         <hgroup>
           <h1>Faux Reddit!</h1>
           <h2>{this.props.currentUser.userName}</h2>
