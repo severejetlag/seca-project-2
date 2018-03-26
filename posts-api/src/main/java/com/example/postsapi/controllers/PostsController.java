@@ -25,8 +25,8 @@ public class PostsController {
     }
 
     @PostMapping("/posts")
-    public Post createPost(@PathVariable Post post){
-        return postRepository.save(post);
+    public Post createPost(@RequestBody Post postRequest){
+        return postRepository.save(postRequest);
     }
 
     @DeleteMapping("/posts/{postId}")

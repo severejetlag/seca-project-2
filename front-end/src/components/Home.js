@@ -15,6 +15,22 @@ class Home extends Component {
           console.log('Error retrieving ideas!')
       }
   }
+
+  createPost = async (post, index) => {
+    post.user = this.props.currentUser
+    try {
+        const newPostResponse = await axios.post(`/posts-api/posts`, post)
+
+        const updatedPostList = [...this.state.posts]
+        updatedPostList.push(newPostResponse.data)
+        this.setState({posts: updatedPostList})
+
+    } catch(error) {
+        console.log('Error creating new User!')
+        console.log(error)
+    }
+  }
+
   render() {
     return (
       <div>
@@ -22,7 +38,11 @@ class Home extends Component {
           <h1>Faux Reddit!</h1>
           <h2>{this.props.currentUser.userName}</h2>
         </hgroup>
-        <PostList posts={this.state.posts}/>
+        <PostList
+          posts={this.state.posts}
+          createPost={this.createPost}
+          currentUser={this.props.currentUser}
+        />
       </div>
     );
   }
