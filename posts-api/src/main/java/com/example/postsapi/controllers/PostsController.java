@@ -16,8 +16,8 @@ public class PostsController {
     private PostRepository postRepository;
 
     @GetMapping("/posts")
-    public List<Post> findAllPosts() {
-        return postRepository.findAllPostsWithUsers();
+    public Iterable<Post> findAllPosts() {
+        return postRepository.findAll();
     }
     @GetMapping("/posts/{postId}")
     public Post findPostById(@PathVariable Long postId) {

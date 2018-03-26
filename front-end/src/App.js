@@ -17,11 +17,12 @@ class App extends Component {
       }
   }
   render() {
+    const HomeComponent = () => (<Home currentUser={this.state.currentUser}/>);
     return (
       <Router>
-        <Switch>
-          <Route exact path="/" component={Home}/>
-        </Switch>
+        <div>
+          <Route exact path="/" render={HomeComponent}/>
+        </div>
       </Router>
     );
   }
