@@ -31,6 +31,20 @@ class Home extends Component {
     }
   }
 
+  deletePost = async (postId, index) => {
+    try {
+        await axios.delete(`/posts-api/posts/${postId}`)
+
+        const updatedPostList = [...this.state.posts]
+        updatedPostList.splice(index, 1)
+        this.setState({posts: updatedPostList})
+
+    } catch (error) {
+        console.log(`Error deleting Idea with ID of ${postId}`)
+        console.log(error)
+    }
+  }
+
   render() {
     return (
       <div>
@@ -40,8 +54,9 @@ class Home extends Component {
         </hgroup>
         <PostList
           posts={this.state.posts}
-          createPost={this.createPost}
           currentUser={this.props.currentUser}
+          createPost={this.createPost}
+          deletePost={this.deletePost}
         />
       </div>
     );
