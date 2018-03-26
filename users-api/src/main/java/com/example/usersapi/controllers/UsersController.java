@@ -4,9 +4,10 @@ package com.example.usersapi.controllers;
 import com.example.usersapi.models.User;
 import com.example.usersapi.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class UsersController {
@@ -22,5 +23,26 @@ public class UsersController {
     @GetMapping("/users/{userId}")
     public User findUserById(@PathVariable Long userId) {
         return userRepository.findOne(userId);
+    }
+
+    @PostMapping("/users")
+    public User createUser(@PathVariable User user){
+        return userRepository.save(user);
+    }
+
+    @DeleteMapping("/users/{userId}")
+    public HttpStatus deleteUser(@PathVariable Long userId){
+        userRepository.delete(userId);
+        return HttpStatus.OK;
+    }
+
+    @PutMapping("/users/{userId}")
+    public User updateUser(@PathVariable Long userId, @RequestBody User userRequest){
+        User userFromDb = userRepository.findOne(userId);
+        userFromDb.setFirstName(userRequest.getFirstName());
+        userFromDb.setLastName(userRequest.getLastName());
+        userFromDb.setPassword(userRequest.getPassword());
+        userFromDb.setCity(userRequest.getCity());
+        return userRepository.save(userFromDb);
     }
 }
