@@ -1,6 +1,6 @@
 node_modeules/
 
-eureka-server/cache
+*/cache
 
 .gradle
 /build/
@@ -28,4 +28,3 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
-
