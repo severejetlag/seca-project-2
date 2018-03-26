@@ -165,3 +165,4 @@
 [2m2018-03-26 16:58:28.900[0;39m [32m INFO[0;39m [35m70[0;39m [2m---[0;39m [2m[nio-8082-exec-1][0;39m [36mo.h.h.i.QueryTranslatorFactoryInitiator [0;39m [2m:[0;39m HHH000397: Using ASTQueryTranslatorFactory
 [2m2018-03-26 17:02:41.259[0;39m [32m INFO[0;39m [35m70[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
 [2m2018-03-26 17:07:41.261[0;39m [32m INFO[0;39m [35m70[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
+[2m2018-03-26 17:12:41.263[0;39m [32m INFO[0;39m [35m70[0;39m [2m---[0;39m [2m[trap-executor-0][0;39m [36mc.n.d.s.r.aws.ConfigClusterResolver     [0;39m [2m:[0;39m Resolving eureka endpoints via configuration
