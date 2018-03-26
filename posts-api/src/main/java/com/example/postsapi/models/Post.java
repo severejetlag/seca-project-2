@@ -8,10 +8,9 @@ import javax.persistence.*;
 @Table(name = "POSTS")
 public class Post {
 
-    public Post(String title, String post,Long userId ,User user){
+    public Post(String title, String post ,User user){
         this.title = title;
         this.post = post;
-        this.userId = userId;
         this.user = user;
     }
 
@@ -25,9 +24,6 @@ public class Post {
 
     @Column(name = "POST")
     private String post;
-
-    @Column(name= "USER_ID")
-    private Long userId;
 
     // Many to one relationship from
     //https://www.javaworld.com/article/2077819/java-se/understanding-jpa-part-2-relationships-the-jpa-way.htmlK
