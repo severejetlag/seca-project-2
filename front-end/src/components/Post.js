@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React from 'react'
 
 const Post = props => {
   const isCurrentUser = props.post.user.userName === props.currentUser.userName

@@ -1,4 +1,4 @@
-import React,{Component} from 'react'
+import React from 'react'
 import Post from './Post'
 import PostNewForm from './PostNewForm'
 
@@ -8,7 +8,7 @@ const PostList = props => {
       <Post
         currentUser={props.currentUser}
         deletePost={props.deletePost}
-        post={post} 
+        post={post}
         key={index}
         index={index}
       />

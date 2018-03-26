@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './components/Home'
 import axios from 'axios'
+import ProfilePage from './components/ProfilePage'
+import {Link} from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -18,11 +20,13 @@ class App extends Component {
   }
   render() {
     const HomeComponent = () => (<Home currentUser={this.state.currentUser}/>);
+    const ProfileComponent = () => (<ProfilePage currentUser={this.state.currentUser}/>)
     return (
       <Router>
-        <div>
+        <Switch>
           <Route exact path="/" render={HomeComponent}/>
-        </div>
+          <Route exact path='/profile' render={ProfileComponent}/>
+        </Switch>
       </Router>
     );
   }
